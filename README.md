@@ -1,4 +1,4 @@
-# TC4 Microstructure Segmentation
+# Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques
 
 Code and experimental results for **Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques**.
 
@@ -88,4 +88,4 @@ docs/             Methods, usage and data availability
 
 Please cite our paper when using this code or the experimental results. Author and title metadata are provided in [CITATION.cff](CITATION.cff) and [citation.bib](citation.bib).
 
-See [RIGHTS.md](RIGHTS.md) for the current distribution terms and third-party notices.
+We release the code and software documentation under the [MIT License](LICENSE). See [RIGHTS.md](RIGHTS.md) for the scope of this license and the separate treatment of manuscript figures and third-party materials.

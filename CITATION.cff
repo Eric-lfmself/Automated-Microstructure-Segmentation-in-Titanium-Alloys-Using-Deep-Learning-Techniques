@@ -1,7 +1,9 @@
 cff-version: 1.2.0
 message: "Please cite our paper when using this code or the experimental results."
-title: "TC4 Microstructure Segmentation"
+title: "Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques"
 type: software
+license: MIT
+repository-code: "https://github.com/Eric-lfmself/Automated-Microstructure-Segmentation-in-Titanium-Alloys-Using-Deep-Learning-Techniques"
 version: 1.0.0
 authors:
   - family-names: Wang

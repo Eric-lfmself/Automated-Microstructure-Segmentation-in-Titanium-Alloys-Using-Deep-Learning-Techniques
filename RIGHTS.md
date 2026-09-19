@@ -1,7 +1,11 @@
-# Rights and third-party software
+# License and third-party materials
 
-We retain copyright in this repository. We have not assigned an open-source license to this release; public availability alone does not grant a license to redistribute or modify the code. Contact us through the repository to discuss reuse terms.
+We release our source code and software documentation under the [MIT License](LICENSE). The copyright notice names the authors of our paper. Our request to cite the paper does not add a condition to the MIT License.
 
-We use PyTorch, torchvision, Hugging Face Transformers, NumPy, SciPy, Pillow and Matplotlib as dependencies. Their code and pretrained weights remain subject to their respective licenses. We do not redistribute dependency source trees, pretrained weights or the underlying microscopy dataset here.
+## Manuscript figures and experimental results
 
-Please cite our paper when referring to the method or experimental results. Attribution does not replace any permissions required for reuse.
+We provide excerpts of Figures 4–6 in `assets/paper/` with their manuscript references. These figure excerpts retain their manuscript copyright and are outside the software MIT license; we do not grant a separate image-reuse license here. The numeric results in `results/paper/` and the packaged JSON copies in `eval/` preserve the values and source locations reported in our paper. Please cite the paper when using these results.
+
+## Dependencies, weights and microscopy data
+
+We use PyTorch, torchvision, Hugging Face Transformers, NumPy, SciPy, Pillow and Matplotlib as dependencies. Their code and pretrained weights remain subject to their respective licenses. Our MIT License does not replace those terms. We do not redistribute dependency source trees, pretrained weights or the underlying microscopy dataset.
