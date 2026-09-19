@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tc4-microstructure-segmentation"
+version = "1.0.0"
+description = "TC4 titanium-alloy microstructure segmentation with residual U-Net and SegFormer"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dynamic = ["dependencies"]
+authors = [
+  {name = "Ruilang Wang"},
+  {name = "Yi Zhao"},
+  {name = "Ziqi Ye"},
+  {name = "Bowen Liu"},
+  {name = "Yucheng Li"},
+  {name = "Donglong Chen"},
+]
+keywords = ["microstructure", "semantic-segmentation", "titanium", "unet", "segformer"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["configs*", "preprocessing*", "data*", "models*", "losses*", "eval*", "training*", "scripts*"]
+
+[tool.setuptools.package-data]
+configs = ["*.json"]
+eval = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

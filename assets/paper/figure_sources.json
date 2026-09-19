@@ -1,0 +1,86 @@
+{
+  "description": "We provide direct raster excerpts of Figures 4-6 from our paper. We preserve the original axes, labels, and visual content without reconstructing curves or adding values.",
+  "source_pdf_sha256": "a52d2c81380d54ebd20a01db35a5eec64af7a909ed377ab4e4473a9f1773be7f",
+  "coordinate_system": "PDF points, top-left origin, bbox=[left,top,right,bottom]",
+  "render_dpi": 300,
+  "figures": [
+    {
+      "figure": "Figure 4",
+      "caption_as_printed": "VGG U-net Training Procedure",
+      "source_pdf_page": 5,
+      "bbox_pdf_points_requested": [
+        137.8501,
+        150.9931,
+        474.1415,
+        267.3431
+      ],
+      "actual_crop_pixels": [
+        574,
+        629,
+        1402,
+        485
+      ],
+      "actual_bbox_pdf_points": [
+        137.76,
+        150.95999999999998,
+        474.23999999999995,
+        267.35999999999996
+      ],
+      "filename": "figure04_unet_training.png",
+      "sha256": "b46b3bb3a05fdd1a82990b41a790ddb16dc2580245b9be51c7c98573cba37041",
+      "caption_included": false
+    },
+    {
+      "figure": "Figure 5",
+      "caption_as_printed": "SegFormer Training Procedure",
+      "source_pdf_page": 5,
+      "bbox_pdf_points_requested": [
+        138.75,
+        281.3423,
+        472.7738,
+        397.6923
+      ],
+      "actual_crop_pixels": [
+        578,
+        1172,
+        1392,
+        486
+      ],
+      "actual_bbox_pdf_points": [
+        138.72,
+        281.28,
+        472.79999999999995,
+        397.91999999999996
+      ],
+      "filename": "figure05_segformer_training.png",
+      "sha256": "6a0c8ff2c8ae58c5be78582a14e5d15b60ebd2b1cc96e0346fd9d71c400ead70",
+      "caption_included": false
+    },
+    {
+      "figure": "Figure 6",
+      "caption_as_printed": "Segmentation Visualization",
+      "source_pdf_page": 7,
+      "bbox_pdf_points_requested": [
+        178.9751,
+        162.9932,
+        433.0251,
+        373.7794
+      ],
+      "actual_crop_pixels": [
+        745,
+        679,
+        1060,
+        879
+      ],
+      "actual_bbox_pdf_points": [
+        178.79999999999998,
+        162.95999999999998,
+        433.2,
+        373.91999999999996
+      ],
+      "filename": "figure06_qualitative.png",
+      "sha256": "3acb1e62bdb6890730a2b417a983547ce123ef40ba91b0abbebe756d48c32768",
+      "caption_included": false
+    }
+  ]
+}

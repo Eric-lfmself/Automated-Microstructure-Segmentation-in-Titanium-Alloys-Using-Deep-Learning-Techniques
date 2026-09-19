@@ -1,0 +1,52 @@
+{
+  "title": "Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques",
+  "authors": [
+    {
+      "given_names": "Ruilang",
+      "family_names": "Wang",
+      "display_name": "Ruilang Wang",
+      "manuscript_marker": "*"
+    },
+    {
+      "given_names": "Yi",
+      "family_names": "Zhao",
+      "display_name": "Yi Zhao",
+      "manuscript_marker": null
+    },
+    {
+      "given_names": "Ziqi",
+      "family_names": "Ye",
+      "display_name": "Ziqi Ye",
+      "manuscript_marker": null
+    },
+    {
+      "given_names": "Bowen",
+      "family_names": "Liu",
+      "display_name": "Bowen Liu",
+      "manuscript_marker": null
+    },
+    {
+      "given_names": "Yucheng",
+      "family_names": "Li",
+      "display_name": "Yucheng Li",
+      "manuscript_marker": null
+    },
+    {
+      "given_names": "Donglong",
+      "family_names": "Chen",
+      "display_name": "Donglong Chen",
+      "manuscript_marker": "†"
+    }
+  ],
+  "affiliation_as_printed": "Beijing Normal–Hong Kong Baptist University, Zhuhai, Guangdong, China",
+  "publication_year": null,
+  "venue": null,
+  "doi": null,
+  "volume": null,
+  "issue": null,
+  "published_page_range": null,
+  "metadata_note": "We include the title, author order, and affiliation printed on the first page of our manuscript. We leave publication fields unset where this manuscript copy does not state them.",
+  "author_marker_note": "We preserve the first-page author markers without assigning an unstated role.",
+  "source_pdf_sha256": "a52d2c81380d54ebd20a01db35a5eec64af7a909ed377ab4e4473a9f1773be7f",
+  "source_author_page": 1
+}

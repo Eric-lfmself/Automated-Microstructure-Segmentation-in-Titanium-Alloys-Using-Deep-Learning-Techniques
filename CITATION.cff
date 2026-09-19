@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "Please cite our paper when using this code or the experimental results."
+title: "TC4 Microstructure Segmentation"
+type: software
+version: 1.0.0
+authors:
+  - family-names: Wang
+    given-names: Ruilang
+  - family-names: Zhao
+    given-names: Yi
+  - family-names: Ye
+    given-names: Ziqi
+  - family-names: Liu
+    given-names: Bowen
+  - family-names: Li
+    given-names: Yucheng
+  - family-names: Chen
+    given-names: Donglong
+keywords:
+  - TC4
+  - microstructure segmentation
+  - U-Net
+  - SegFormer
+preferred-citation:
+  type: article
+  title: "Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques"
+  authors:
+    - family-names: Wang
+      given-names: Ruilang
+    - family-names: Zhao
+      given-names: Yi
+    - family-names: Ye
+      given-names: Ziqi
+    - family-names: Liu
+      given-names: Bowen
+    - family-names: Li
+      given-names: Yucheng
+    - family-names: Chen
+      given-names: Donglong

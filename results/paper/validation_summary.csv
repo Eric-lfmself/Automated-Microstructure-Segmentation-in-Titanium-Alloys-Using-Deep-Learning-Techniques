@@ -1,0 +1,3 @@
+model,validation_pixel_accuracy_approx,training_loss_approx,description,source_section,source_pdf_page
+unet_vgg,0.83,0.45,We describe validation accuracy as plateauing around this value.,3.1,4
+segformer,0.77,0.53,We describe validation accuracy as fluctuating around this value.,3.1,5

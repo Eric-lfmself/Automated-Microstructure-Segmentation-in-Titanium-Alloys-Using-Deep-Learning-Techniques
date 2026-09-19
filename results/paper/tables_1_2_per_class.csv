@@ -1,0 +1,11 @@
+model,model_as_printed,paper_class,code_class_id,structure,per_class_iou,table_metric_header_as_printed,source_table,source_pdf_page
+unet_vgg,VGG based U-Net,1,0,Equiaxed alpha-phase,0.8746,mIoU,1,5
+unet_vgg,VGG based U-Net,2,1,Colony (Orientation 1),0.5602,mIoU,1,5
+unet_vgg,VGG based U-Net,3,2,Colony (Orientation 2),0.6853,mIoU,1,5
+unet_vgg,VGG based U-Net,4,3,Colony (Orientation 3),0.7251,mIoU,1,5
+unet_vgg,VGG based U-Net,5,4,Colony (Orientation 4),0.6452,mIoU,1,5
+segformer,SegFormer,1,0,Equiaxed alpha-phase,0.8410,mIoU,2,6
+segformer,SegFormer,2,1,Colony (Orientation 1),0.5803,mIoU,2,6
+segformer,SegFormer,3,2,Colony (Orientation 2),0.6955,mIoU,2,6
+segformer,SegFormer,4,3,Colony (Orientation 3),0.7397,mIoU,2,6
+segformer,SegFormer,5,4,Colony (Orientation 4),0.6704,mIoU,2,6

@@ -1,0 +1,8 @@
+torch==2.8.0
+torchvision==0.23.0
+transformers==4.57.1
+numpy==2.2.6
+scipy==1.16.2
+Pillow==11.3.0
+pytest==8.4.2
+matplotlib==3.10.6

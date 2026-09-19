@@ -1,0 +1,50 @@
+{
+  "model": "unet_vgg",
+  "num_classes": 5,
+  "source_image_size": [
+    1024,
+    1024
+  ],
+  "image_size": [
+    1024,
+    1024
+  ],
+  "device": "cpu",
+  "dry_run": false,
+  "use_random_init": false,
+  "allow_download": false,
+  "weights_path": null,
+  "checkpoint": "nvidia/mit-b0",
+  "sigmas": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "iw_weights": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "class_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "dropout": 0.1,
+  "batch_size": 2,
+  "dummy_length": 4,
+  "epochs": 100,
+  "max_batches": null,
+  "learning_rate": 0.0001,
+  "seed": 42,
+  "num_workers": 0,
+  "train_manifest": "local_data/train.csv",
+  "val_manifest": "local_data/val.csv",
+  "test_manifest": "local_data/test.csv",
+  "label_offset": 0,
+  "output_dir": "runs/real_experiment"
+}

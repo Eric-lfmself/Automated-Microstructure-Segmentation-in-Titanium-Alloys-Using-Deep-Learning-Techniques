@@ -1,0 +1,2 @@
+source_section,source_pdf_page,image_size,full_pipeline_seconds_per_image_approx,manual_annotation_seconds_per_image_approx,manual_annotation_minutes_per_image_approx,reported_speedup,pipeline_scope,hardware_as_stated,hardware_specification
+3.4,7,1024x1024,36,900,15,25,preprocessing; model inference; post-processing,standard hardware,

@@ -1,0 +1,5 @@
+model,metric,table_3_reported,arithmetic_mean_of_displayed_class_values,calculated_minus_reported,input_table
+unet_vgg,miou,0.6989,0.69808,-0.00082,1
+unet_vgg,avg_colony_iou_classes_2_5,0.6538,0.65395,0.00015,1
+segformer,miou,0.6725,0.70538,0.03288,2
+segformer,avg_colony_iou_classes_2_5,0.6725,0.671475,-0.001025,2

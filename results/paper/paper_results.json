@@ -1,0 +1,219 @@
+{
+  "description": "We preserve the original experimental values reported in Tables 1-3 and Sections 3.1 and 3.4 of our paper.",
+  "value_kind": "paper_reported_experimental_results",
+  "paper_title": "Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques",
+  "source_pdf_sha256": "a52d2c81380d54ebd20a01db35a5eec64af7a909ed377ab4e4473a9f1773be7f",
+  "tables_1_2": [
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "paper_class": 1,
+      "code_class_id": 0,
+      "structure": "Equiaxed alpha-phase",
+      "per_class_iou": "0.8746",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 1,
+      "source_pdf_page": 5
+    },
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "paper_class": 2,
+      "code_class_id": 1,
+      "structure": "Colony (Orientation 1)",
+      "per_class_iou": "0.5602",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 1,
+      "source_pdf_page": 5
+    },
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "paper_class": 3,
+      "code_class_id": 2,
+      "structure": "Colony (Orientation 2)",
+      "per_class_iou": "0.6853",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 1,
+      "source_pdf_page": 5
+    },
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "paper_class": 4,
+      "code_class_id": 3,
+      "structure": "Colony (Orientation 3)",
+      "per_class_iou": "0.7251",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 1,
+      "source_pdf_page": 5
+    },
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "paper_class": 5,
+      "code_class_id": 4,
+      "structure": "Colony (Orientation 4)",
+      "per_class_iou": "0.6452",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 1,
+      "source_pdf_page": 5
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "paper_class": 1,
+      "code_class_id": 0,
+      "structure": "Equiaxed alpha-phase",
+      "per_class_iou": "0.8410",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 2,
+      "source_pdf_page": 6
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "paper_class": 2,
+      "code_class_id": 1,
+      "structure": "Colony (Orientation 1)",
+      "per_class_iou": "0.5803",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 2,
+      "source_pdf_page": 6
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "paper_class": 3,
+      "code_class_id": 2,
+      "structure": "Colony (Orientation 2)",
+      "per_class_iou": "0.6955",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 2,
+      "source_pdf_page": 6
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "paper_class": 4,
+      "code_class_id": 3,
+      "structure": "Colony (Orientation 3)",
+      "per_class_iou": "0.7397",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 2,
+      "source_pdf_page": 6
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "paper_class": 5,
+      "code_class_id": 4,
+      "structure": "Colony (Orientation 4)",
+      "per_class_iou": "0.6704",
+      "table_metric_header_as_printed": "mIoU",
+      "source_table": 2,
+      "source_pdf_page": 6
+    }
+  ],
+  "table_3": [
+    {
+      "model": "unet_vgg",
+      "model_as_printed": "VGG based U-Net",
+      "pixel_accuracy": "0.9000",
+      "miou": "0.6989",
+      "alpha_phase_iou": "0.8746",
+      "avg_colony_iou_classes_2_5": "0.6538",
+      "source_table": 3,
+      "source_pdf_page": 6
+    },
+    {
+      "model": "segformer",
+      "model_as_printed": "SegFormer",
+      "pixel_accuracy": "0.8449",
+      "miou": "0.6725",
+      "alpha_phase_iou": "0.8410",
+      "avg_colony_iou_classes_2_5": "0.6725",
+      "source_table": 3,
+      "source_pdf_page": 6
+    }
+  ],
+  "arithmetic_check": [
+    {
+      "model": "unet_vgg",
+      "metric": "miou",
+      "table_3_reported": "0.6989",
+      "arithmetic_mean_of_displayed_class_values": "0.69808",
+      "calculated_minus_reported": "-0.00082",
+      "input_table": 1
+    },
+    {
+      "model": "unet_vgg",
+      "metric": "avg_colony_iou_classes_2_5",
+      "table_3_reported": "0.6538",
+      "arithmetic_mean_of_displayed_class_values": "0.65395",
+      "calculated_minus_reported": "0.00015",
+      "input_table": 1
+    },
+    {
+      "model": "segformer",
+      "metric": "miou",
+      "table_3_reported": "0.6725",
+      "arithmetic_mean_of_displayed_class_values": "0.70538",
+      "calculated_minus_reported": "0.03288",
+      "input_table": 2
+    },
+    {
+      "model": "segformer",
+      "metric": "avg_colony_iou_classes_2_5",
+      "table_3_reported": "0.6725",
+      "arithmetic_mean_of_displayed_class_values": "0.671475",
+      "calculated_minus_reported": "-0.001025",
+      "input_table": 2
+    }
+  ],
+  "validation_summary": [
+    {
+      "model": "unet_vgg",
+      "validation_pixel_accuracy_approx": "0.83",
+      "training_loss_approx": "0.45",
+      "description": "We describe validation accuracy as plateauing around this value.",
+      "source_section": "3.1",
+      "source_pdf_page": 4
+    },
+    {
+      "model": "segformer",
+      "validation_pixel_accuracy_approx": "0.77",
+      "training_loss_approx": "0.53",
+      "description": "We describe validation accuracy as fluctuating around this value.",
+      "source_section": "3.1",
+      "source_pdf_page": 5
+    }
+  ],
+  "efficiency": {
+    "source_section": "3.4",
+    "source_pdf_page": 7,
+    "image_size": [
+      1024,
+      1024
+    ],
+    "full_pipeline_seconds_per_image_approx": 36,
+    "manual_annotation_seconds_per_image_approx": 900,
+    "manual_annotation_minutes_per_image_approx": 15,
+    "reported_speedup": 25,
+    "pipeline_scope": [
+      "preprocessing",
+      "model inference",
+      "post-processing"
+    ],
+    "hardware_as_stated": "standard hardware",
+    "hardware_specification": null
+  },
+  "evaluation_context": {
+    "annotated_micrographs": 112,
+    "dataset_source_section": "2.1",
+    "representative_held_out_test_micrographs": 8,
+    "test_description_source_section": "3.2",
+    "note": "We describe eight representative held-out test micrographs and evaluate both models on the same images. We do not infer the complete dataset split from that statement."
+  },
+  "archival_note": "We keep these reported results separate from the small synthetic checks used to validate our public implementation. These files contain reported tables and descriptions, not raw per-epoch logs or model checkpoints."
+}
