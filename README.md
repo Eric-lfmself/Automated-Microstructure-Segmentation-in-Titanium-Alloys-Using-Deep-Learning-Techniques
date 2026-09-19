@@ -2,10 +2,6 @@
 
 Code and experimental results for **Automated Microstructure Segmentation in Titanium Alloys Using Deep Learning Techniques**.
 
-**Ruilang Wang, Yi Zhao, Ziqi Ye, Bowen Liu, Yucheng Li, and Donglong Chen**
-
-Beijing Normal–Hong Kong Baptist University, Zhuhai, Guangdong, China
-
 We study five-class semantic segmentation of Ti-6Al-4V (TC4) microstructures. Our pipeline combines IWMID enhancement and Otsu binarization with a VGG16-based residual U-Net or SegFormer-B0. We distinguish equiaxed alpha grains and four colony orientation classes.
 
 [Experimental results](results/paper/README.md) · [Methods](docs/METHODS.md) · [Data format](data/README.md) · [Training and evaluation](docs/USAGE.md) · [Citation](CITATION.cff) · [Software validation](docs/VALIDATION.md)
