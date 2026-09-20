@@ -19,7 +19,7 @@ Copy `configs/real_template.json` to `configs/my_experiment.json`, then set:
 
 1. `model` to `unet_vgg` or `segformer_b0`.
 2. `train_manifest`, `val_manifest` and `test_manifest` to separate local CSV files.
-3. Encoder initialization, image size, class weights, learning rate, batch size and total epochs.
+3. Encoder initialization: set `weights_path` to local pretrained weights, or set `use_random_init=true` to train from scratch. Then choose image size, class weights, learning rate, batch size and total epochs.
 4. `output_dir` to a new directory, such as `runs/my_experiment`.
 
 The template uses 1024 × 1024 inputs, 100 epochs and CPU execution. These are editable settings, not an archived experimental run. Compute any data-derived class weights from training labels only. Keep `allow_download=false` in configurations used for evaluation.
@@ -67,3 +67,13 @@ python -m scripts.export_paper_results --output-dir runs/paper_tables
 ```
 
 This command exports the experimental values already reported in our manuscript. It does not run a model. We keep the reported tables, arithmetic aggregation notes and generated local evaluation outputs separate. The output directory must be empty to prevent overwriting an existing experiment.
+
+## Troubleshooting
+
+**The Python version is unsupported.** We support Python 3.11 and 3.12. Create the environment with the matching executable, for example `python3.12 -m venv .venv`, then activate it and install the project. Use `python -m pip` to install into that environment.
+
+**Training requests encoder weights.** The local-data template enables pretrained initialization and disables downloads. Set `weights_path` to a local encoder file or directory in a [supported format](#pretrained-encoder-weights), or set `use_random_init=true` for a new run from scratch. `scripts.check_config` validates configuration values; training also checks the data files and weights.
+
+**The output directory is not empty.** Choose a new `output_dir` for a new training run, smoke check, evaluation or table export. To continue an existing training run, use `--resume` with its checkpoint as described in [Resume](#resume).
+
+**Masks or splits are rejected.** Use single-band class-ID masks with values `0..4`, or `1..5` with `label_offset=1`. Keep train, validation and test manifests separate, with unique IDs and no repeated images across splits. The [data guide](../data/README.md) covers mask conversion, relative paths and specimen grouping.

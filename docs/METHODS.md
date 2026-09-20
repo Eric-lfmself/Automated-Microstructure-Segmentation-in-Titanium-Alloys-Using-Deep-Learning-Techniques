@@ -38,7 +38,7 @@ The input pipeline does not apply rotations or flips: absolute orientation label
 
 ## Release configuration
 
-We expose all settings in `configs/config.py`. The following are configurable release defaults; the result archive preserves the experimental values reported in our paper independently of these settings.
+The table below summarizes our implementation settings. We expose run parameters in `configs/config.py`; AdamW weight decay, ImageNet normalization, BT.601 grayscale conversion and the 256-bin Otsu histogram are fixed implementation choices. The result archive preserves the experimental values reported in our paper independently of these settings.
 
 | Setting | Default |
 | --- | --- |
