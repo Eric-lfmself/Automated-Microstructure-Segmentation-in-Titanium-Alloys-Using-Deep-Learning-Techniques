@@ -1,0 +1,28 @@
+---
+config:
+  htmlLabels: false
+  theme: base
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 18px
+    primaryColor: '#eef4fb'
+    primaryBorderColor: '#4773a3'
+    primaryTextColor: '#1f2937'
+    lineColor: '#64748b'
+    background: '#ffffff'
+  flowchart:
+    htmlLabels: false
+    curve: linear
+    nodeSpacing: 28
+    rankSpacing: 32
+    diagramPadding: 16
+---
+flowchart TD
+    A["TC4 micrograph"] --> B["IWMID enhancement"]
+    B --> C["RGB normalization<br/>(3 channels)"]
+    C --> D["VGG16 residual U-Net<br/>or SegFormer-B0"]
+    D --> E["Five-class segmentation"]
+    B -.-> F["Grayscale + Otsu"]
+    F -.-> G["Separate binary prior"]
+    classDef auxiliary fill:#f5f6f8,stroke:#8a94a3,color:#374151
+    class F,G auxiliary

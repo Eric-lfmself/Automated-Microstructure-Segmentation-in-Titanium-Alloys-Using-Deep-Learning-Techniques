@@ -40,17 +40,11 @@ We release [Tables 1–3 and timing results as CSV and JSON](results/paper/READM
 
 The diagram below shows the public implementation. Both architectures receive three-channel RGB inputs and produce five-class segmentation maps.
 
-```mermaid
-flowchart TD
-    A["TC4 micrograph"] --> B["IWMID image enhancement"]
-    B --> C["RGB normalization"]
-    C --> D["VGG16 residual U-Net"]
-    C --> E["SegFormer-B0"]
-    D --> F["Five-class segmentation"]
-    E --> F
-    B -.-> G["Grayscale + Otsu thresholding"]
-    G -.-> H["Separate binary prior"]
-```
+<p align="center">
+  <img src="assets/method_overview.svg" alt="Implementation overview: IWMID-enhanced RGB enters either VGG16 residual U-Net or SegFormer-B0; Otsu produces a separate binary prior" width="640">
+</p>
+
+[Editable diagram source](assets/method_overview.mmd).
 
 We train and evaluate the two models independently. The Otsu prior is exposed separately by the data interface. Training uses orientation-preserving augmentation and weighted cross-entropy; evaluation reports pixel accuracy and IoU from a dataset-wide confusion matrix. See [Methods](docs/METHODS.md) for equations, architecture details and configuration defaults.
 
