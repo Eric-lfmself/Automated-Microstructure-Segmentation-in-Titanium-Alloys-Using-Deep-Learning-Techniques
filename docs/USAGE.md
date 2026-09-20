@@ -68,6 +68,14 @@ python -m scripts.export_paper_results --output-dir runs/paper_tables
 
 This command exports the experimental values already reported in our manuscript. It does not run a model. We keep the reported tables, arithmetic aggregation notes and generated local evaluation outputs separate. The output directory must be empty to prevent overwriting an existing experiment.
 
+## Plot the paper results
+
+```sh
+python -m scripts.plot_paper_results --output-dir runs/paper_figures
+```
+
+From the repository root, this reads the archived per-class IoU and timing CSV files and writes PNG/SVG charts with a provenance manifest. We preserve the printed values and label the timing as approximate. To plot an exported result archive elsewhere, also pass `--results-dir /path/to/paper_tables`. Choose an empty output directory. The original training curves remain figure excerpts in `assets/paper/`.
+
 ## Troubleshooting
 
 **The Python version is unsupported.** We support Python 3.11 and 3.12. Create the environment with the matching executable, for example `python3.12 -m venv .venv`, then activate it and install the project. Use `python -m pip` to install into that environment.

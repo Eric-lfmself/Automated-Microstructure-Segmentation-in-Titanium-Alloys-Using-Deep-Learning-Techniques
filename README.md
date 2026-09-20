@@ -17,13 +17,21 @@
 
 We segment **Ti–6Al–4V (TC4) microstructures into five classes**: equiaxed α grains and four colony orientation classes. Our study compares a **VGG16-based residual U-Net** with **SegFormer-B0**, using IWMID image enhancement and a shared training and evaluation pipeline.
 
+## Method overview
+
 <p align="center">
-  <img src="assets/paper/figure06_qualitative.png" alt="Figure 6: three micrographs with ground-truth annotations and segmentation predictions from VGG U-Net and SegFormer" width="760">
+  <a href="assets/method_overview.svg"><img src="assets/method_overview.png" alt="TC4 framework: shared IWMID preprocessing feeds a five-stage residual U-Net or a four-scale SegFormer independently; Otsu returns a separate prior; each model produces its own five-class prediction" width="960"></a>
 </p>
 
-*Qualitative results from our paper (Figure 6). Left to right: micrograph, ground truth, VGG U-Net and SegFormer. [View the original figures and training curves →](assets/paper/README.md)*
+*Our framework, with the two model paths expanded. The micrograph and prediction insets come from Figure 6 (a, c, d) of our paper. [Open the full-size, editable SVG](assets/method_overview.svg) · [Figure sources](assets/README.md).*
+
+We enhance each image with IWMID, then normalize the three-channel RGB input. The VGG16 residual U-Net combines encoder skip features with learned upsampling; SegFormer-B0 combines four MiT feature scales in its MLP decoder. We train and evaluate the two models independently using the same data protocol. The grayscale/Otsu branch returns an auxiliary binary prior separately. See [Methods](docs/METHODS.md) for equations and architecture details.
 
 ## Experimental results
+
+[Model comparison](#model-comparison) · [Per-class IoU](#per-class-iou) · [Qualitative results](#qualitative-results) · [Training dynamics](#training-dynamics) · [Processing time](#processing-time)
+
+### Model comparison
 
 **Our VGG-based U-Net achieves 90.0% pixel accuracy.** We report the comparison below in Table 3; all table values are fractions.
 
@@ -32,21 +40,43 @@ We segment **Ti–6Al–4V (TC4) microstructures into five classes**: equiaxed �
 | VGG-based U-Net | **0.9000** | **0.6989** | **0.8746** | 0.6538 |
 | SegFormer | 0.8449 | 0.6725 | 0.8410 | **0.6725** |
 
-Our full pipeline takes approximately **36 seconds per 1024 × 1024 image**, compared with **15 minutes** for manual annotation: approximately **25× faster** (Section 3.4).
+We preserve the paper's reported values in the [CSV and JSON result archive](results/paper/README.md). The [aggregation notes](results/paper/AGGREGATION.md) document differences between Table 3 and means calculated from the printed per-class scores.
 
-We release [Tables 1–3 and timing results as CSV and JSON](results/paper/README.md), preserving the values reported in our paper. The [aggregation notes](results/paper/AGGREGATION.md) document differences between Table 3 and means calculated from the printed per-class scores. The timing above covers the full paper pipeline; local evaluation reports model inference time separately.
+### Per-class IoU
 
-## Method overview
+The VGG-based U-Net has higher IoU for equiaxed α, while SegFormer has higher IoU for each of the four colony orientation classes in Tables 1 and 2.
 
-The diagram below shows the public implementation. Both architectures receive three-channel RGB inputs and produce five-class segmentation maps.
+![Per-class IoU for both models across all five microstructure classes, with the original four-decimal values](assets/results/per_class_iou.png)
+
+*We plot all ten reported class scores on a common 0–1 scale. [Source values: Tables 1–2](results/paper/tables_1_2_per_class.csv) · [Vector figure](assets/results/per_class_iou.svg).*
+
+### Qualitative results
 
 <p align="center">
-  <img src="assets/method_overview.svg" alt="Implementation overview: IWMID-enhanced RGB enters either VGG16 residual U-Net or SegFormer-B0; Otsu produces a separate binary prior" width="640">
+  <img src="assets/paper/figure06_qualitative.png" alt="Figure 6: three micrographs with ground truth, VGG U-Net predictions and SegFormer predictions" width="860">
 </p>
 
-[Editable diagram source](assets/method_overview.mmd).
+*Figure 6 from our paper. Columns show the original micrograph, ground truth, VGG-based U-Net and SegFormer, respectively. We preserve the original panel labels and image content.*
 
-We train and evaluate the two models independently. The Otsu prior is exposed separately by the data interface. Training uses orientation-preserving augmentation and weighted cross-entropy; evaluation reports pixel accuracy and IoU from a dataset-wide confusion matrix. See [Methods](docs/METHODS.md) for equations, architecture details and configuration defaults.
+### Training dynamics
+
+**VGG-based U-Net — Figure 4**
+
+![Original Figure 4 showing the VGG U-Net training loss and validation accuracy curves](assets/paper/figure04_unet_training.png)
+
+**SegFormer — Figure 5**
+
+![Original Figure 5 showing the SegFormer training loss and validation accuracy curves](assets/paper/figure05_segformer_training.png)
+
+*Original training-curve figures from our paper, retained with their axes and legends. [Figure archive and source locations](assets/paper/README.md).*
+
+### Processing time
+
+Our full pipeline takes approximately **36 seconds per 1024 × 1024 image**, compared with **15 minutes** for manual annotation: approximately **25× faster** (Section 3.4).
+
+![Reported full-pipeline processing time of approximately 36 seconds compared with approximately 900 seconds for manual annotation](assets/results/processing_time.png)
+
+*The reported timing includes preprocessing, model inference and post-processing. Local evaluation records model inference time separately. [Source measurements](results/paper/efficiency.csv) · [Vector figure](assets/results/processing_time.svg).*
 
 ## Quick start
 

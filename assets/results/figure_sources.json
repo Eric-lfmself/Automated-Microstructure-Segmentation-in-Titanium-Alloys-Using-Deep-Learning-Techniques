@@ -1,0 +1,26 @@
+{
+  "description": "We plot the reported per-class IoU and full-pipeline timing without recomputing aggregates.",
+  "sources": [
+    {
+      "path": "results/paper/tables_1_2_per_class.csv",
+      "sha256": "d042736ca26247d32e68636dd81b56ec72effa28917751fcafa065d0f3880a95"
+    },
+    {
+      "path": "results/paper/efficiency.csv",
+      "sha256": "04d57c3d1c4a5659d7671089d5ea8b316b8d0fc4a38ed5f4b587301f93e9073d"
+    }
+  ],
+  "operations": [
+    "Read CSV values",
+    "Draw zero-baseline horizontal bars",
+    "Print original four-decimal IoU values",
+    "Label timing values as approximate"
+  ],
+  "uncertainty": "No error bars are added; the source tables do not report repeated-run variability.",
+  "outputs": {
+    "per_class_iou.png": "39ce7dff489c4941c2a71f326bec63ef87c2f45bd1bcb57f63003a36ec183dcd",
+    "per_class_iou.svg": "4f512054b00c2a0c54e3fc73b1fe4bcd272c6f0558ab572718687eb769fcc106",
+    "processing_time.png": "f0b4058f50d2e8d0bbc8bba9fe148e94929be818bf28b242d5af3fce9feda583",
+    "processing_time.svg": "99a9c228d8b1d859b7cbcf3fdebc12e3dcdec7a1656f73797fa95786bd4248f1"
+  }
+}

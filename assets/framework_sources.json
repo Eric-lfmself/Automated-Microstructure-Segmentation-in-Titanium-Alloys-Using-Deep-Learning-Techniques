@@ -1,0 +1,48 @@
+{
+  "description": "We draw the public implementation with separate model paths; embedded microscopy panels reproduce manuscript Figure 6.",
+  "source_figure": "assets/paper/figure06_qualitative.png",
+  "source_sha256": "3acb1e62bdb6890730a2b417a983547ce123ef40ba91b0abbebe756d48c32768",
+  "source_size_pixels": [
+    1060,
+    879
+  ],
+  "coordinate_system": "SVG viewBox rectangles in source pixels: [left, top, width, height]",
+  "insets": [
+    {
+      "panel": "a",
+      "role": "input micrograph",
+      "viewbox": [
+        10,
+        106,
+        235,
+        235
+      ]
+    },
+    {
+      "panel": "c",
+      "role": "VGG U-Net prediction",
+      "viewbox": [
+        542,
+        105,
+        236,
+        237
+      ]
+    },
+    {
+      "panel": "d",
+      "role": "SegFormer prediction",
+      "viewbox": [
+        805,
+        106,
+        233,
+        236
+      ]
+    }
+  ],
+  "image_adjustments": "None. Source excerpts are clipped and scaled proportionally for layout.",
+  "architecture_blocks": "Schematic; not measured feature activations.",
+  "outputs": {
+    "method_overview.svg": "1b58040551cacb7580fbfb7b0d024b18726f9e9ed4990bd652705bb9fac66358",
+    "method_overview.png": "12c7857fb4100db100099e882dbb2c376f670dc90577255d5fc99b9c1c97e7f0"
+  }
+}

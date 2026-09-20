@@ -29,3 +29,5 @@ jobs:
         run: python -m scripts.smoke --output-dir runs/ci-smoke
       - name: Export manuscript tables
         run: python -m scripts.export_paper_results --output-dir runs/paper-tables
+      - name: Plot manuscript results
+        run: python -m scripts.plot_paper_results --output-dir runs/paper-figures

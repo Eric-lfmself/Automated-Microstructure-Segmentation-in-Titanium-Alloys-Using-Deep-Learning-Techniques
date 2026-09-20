@@ -4,3 +4,5 @@ recursive-include results/paper *.json *.csv *.md
 recursive-include assets/paper *.png *.json *.md
 recursive-include tests *.py
 include assets/method_overview.svg assets/method_overview.mmd
+include assets/README.md assets/framework_sources.json assets/method_overview.png
+recursive-include assets/results *.png *.svg *.json

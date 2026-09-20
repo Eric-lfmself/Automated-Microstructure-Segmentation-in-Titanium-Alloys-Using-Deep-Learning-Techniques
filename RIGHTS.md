@@ -4,7 +4,7 @@ We release our source code and software documentation under the [MIT License](LI
 
 ## Manuscript figures and experimental results
 
-We provide excerpts of Figures 4–6 in `assets/paper/` with their manuscript references. These figure excerpts retain their manuscript copyright and are outside the software MIT license; we do not grant a separate image-reuse license here. The numeric results in `results/paper/` and the packaged JSON copies in `eval/` preserve the values and source locations reported in our paper. Please cite the paper when using these results.
+We provide excerpts of Figures 4–6 in `assets/paper/` with their manuscript references. These figure excerpts, including the Figure 6 insets embedded in `assets/method_overview.svg` and its PNG preview, retain their manuscript copyright and are outside the software MIT license; we do not grant a separate image-reuse license here. The numeric results in `results/paper/` and the packaged JSON copies in `eval/` preserve the values and source locations reported in our paper. Please cite the paper when using these results.
 
 ## Dependencies, weights and microscopy data
 
